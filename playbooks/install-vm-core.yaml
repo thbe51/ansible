@@ -1,9 +1,10 @@
-- hosts: ubuntu
-    became: true
+- hosts: "{{ hosts }}"
 
+  became: yes
   tasks:
+
   - name: install core packages
     apt:
-      pkg:
+      name:
         - nfs-common
       update_cache: yes
