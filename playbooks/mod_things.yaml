@@ -1,0 +1,19 @@
+---
+- hosts: "{{ hosts }}"
+
+  become: true
+  tasks:
+
+    - name: add sudoers file for thomas
+      copy:
+        dest: /etc/sudoers.d/thomas
+        content: "thomas ALL=(ALL) NOPASSWD: ALL\n"
+        owner: root
+        group: root
+        mode: 0440
+
+    - name: add hidden file .digrc to home-folder
+      copy:
+        dest: "~/.digrc"
+        content: "+answer +search\n"
+        mode: 0644
