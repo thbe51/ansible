@@ -1,8 +1,8 @@
+---
 - hosts: "{{ hosts }}"
 
-    became: yes
-    tasks:
-
+  became: yes
+  tasks:
     - name: install core packages
       apt:
         name:
@@ -24,4 +24,4 @@
           - fping
           - ncdu
           - ripgrep
-        update_caches: yes
+      update_caches: yes
