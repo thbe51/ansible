@@ -1,4 +1,3 @@
----
 - hosts: all
   became: yes
   tasks:
