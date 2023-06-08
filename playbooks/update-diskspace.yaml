@@ -1,4 +1,4 @@
-- hosts: "dns.acat.se"
+- hosts: "{{ hosts }}"
 
   tasks:
 
