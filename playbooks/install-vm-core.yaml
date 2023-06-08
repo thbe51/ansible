@@ -3,8 +3,8 @@
   became: yes
   tasks:
 
-  - name: install core packages
-    apt:
-      name:
-        - nfs-common
-      update_cache: yes
+    - name: install core packages
+      apt:
+        name:
+          - nfs-common
+        update_cache: yes
