@@ -1,27 +1,8 @@
 ---
 - hosts: all
-
-# became: true
+  became: yes
   tasks:
-    - name: install core packages
-      apt:
-        name:
-          - nfs-common
-          - neofetch
-          - dnsutils
-          - net-tools
-          - htop
-          - unzip
-          - nmap
-          - mlocate
-          - exa
-          - acl
-          - at
-          - jq
-          - whois
-          - bat
-          - sysstat
-          - fping
-          - ncdu
-          - ripgrep
-        update_caches: yes
+  - name: install core packages
+    apt:
+      name: nfs-common
+      update_caches: yes
