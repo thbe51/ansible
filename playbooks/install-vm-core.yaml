@@ -1,5 +1,6 @@
 - hosts: ubuntu
-  became: true
+    became: true
+
   tasks:
   - name: install core packages
     apt:
