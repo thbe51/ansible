@@ -1,0 +1,16 @@
+- hosts: "{{ hosts }}"
+
+  became: yes
+  tasks:
+
+    - name: install qemu-guest-agent
+      apt:
+        name:
+          - qemu-guest-agent
+        update_cache: yes
+
+    - name: start guest qemu-guest-agent
+      service:
+        name: qemu-guest-agent
+        state: started
+        enabled: yes
