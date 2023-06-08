@@ -1,7 +1,7 @@
 - hosts: ubuntu
-  became: yes
+  became: true
   tasks:
   - name: install core packages
     apt:
       name: nfs-common
-      update_caches: yes
+      update_cache: yes
