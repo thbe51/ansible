@@ -24,4 +24,4 @@
           - fping
           - ncdu
           - ripgrep
-        update_caches: yes
+        update_cache: yes
