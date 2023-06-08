@@ -1,6 +1,6 @@
 - hosts: "{{ hosts }}"
 
-  became: yes
+  become: yes
   tasks:
 
     - name: install qemu-guest-agent
