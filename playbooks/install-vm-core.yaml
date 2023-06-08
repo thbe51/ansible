@@ -1,7 +1,7 @@
 ---
 - hosts: "{{ hosts }}"
 
-  became: yes
+  became: true
   tasks:
     - name: install core packages
       apt:
