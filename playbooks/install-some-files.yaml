@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ ubuntu }}"
+- hosts: "{{ hosts }}"
 
   become: yes
   tasks:
@@ -7,7 +7,7 @@
     - name: install-sysupdate
       copy:
         src: "{{ sysupdate }}"
-        dst: "/usr/local/bin/sysupdate"
-        mode: 0700
-        owner: root
-        group: root
+        dest: "/usr/local/bin/sysupdate"
+        mode: "0700"
+        owner: "root"
+        group: "root"
