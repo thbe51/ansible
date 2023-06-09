@@ -1,5 +1,6 @@
 ---
-- hosts: "{{ acat }}"
+- hosts: all
+#"{{ acat }}"
 
   become: true
   tasks:
