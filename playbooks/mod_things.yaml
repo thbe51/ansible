@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ acat }}"
+- hosts: "{{ ubuntu }}"
 
   become: true
   tasks:
