@@ -6,7 +6,7 @@
     - name: install sysupdate
       copy:
         dest: /usr/local/bin/sysupdate
-        src: "{{ sysupdate }}"
+        src: "{{ var_su }}"
         mode: 0700
         owner: root
         group: root
