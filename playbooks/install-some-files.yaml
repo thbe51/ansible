@@ -1,13 +1,14 @@
 ---
 - hosts: "{{ hosts }}"
 
-  become: yes
+  become: true
   tasks:
 
-    - name: install-sysupdate
+    - name: install sysupdate
       copy:
-        src: "{{ sysupdate }}"
-        dest: "/usr/local/bin/sysupdate"
-        mode: "0700"
-        owner: "root"
-        group: "root"
+#        src: "{{ sysupdate }}"
+        src: /opt/files/sysupdate
+        dest: /usr/local/bin/sysupdate
+        mode: 0700
+        owner: root
+        group: root
