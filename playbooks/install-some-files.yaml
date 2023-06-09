@@ -5,10 +5,10 @@
   tasks:
 
     - name: install sysupdate
-      copy:
-        src: "{{ sysupdate }}"
-        dst: "/usr/local/bin/sysupdate"
-        mode: 0700
-        owner: root
-        group: root
+        copy:
+          src: "{{ sysupdate }}"
+          dst: "/usr/local/bin/sysupdate"
+          mode: 0700
+          owner: root
+          group: root
 
