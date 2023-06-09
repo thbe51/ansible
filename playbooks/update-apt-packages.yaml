@@ -9,6 +9,13 @@
         upgrade: yes
         update_cache: yes
 
+    # Clean up
+    - name: clean up stuff
+      apt:
+        autoremove: yes
+        clean: yes
+        autoclean: yes
+
     # Check if reboot is required
     - name: Check if system reboot is required
       become: true
