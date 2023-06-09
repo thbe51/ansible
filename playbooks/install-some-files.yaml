@@ -7,7 +7,23 @@
     - name: install sysupdate
       copy:
         dest: /usr/local/bin/sysupdate
-        src: "{{ sysupdate }}"
+        src: "{{ sup }}"
+        mode: 0700
+        owner: root
+        group: root
+
+    - name: install remove old kernels
+      copy:
+        dest: /usr/local/bin/sysupdate
+        src: "{{ rok }}"
+        mode: 0700
+        owner: root
+        group: root
+
+    - name: install install docker-compose
+      copy:
+        dest: /usr/local/bin/sysupdate
+        src: "{{ doc }}"
         mode: 0700
         owner: root
         group: root
