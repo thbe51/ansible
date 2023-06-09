@@ -7,7 +7,7 @@
     - name: install sysupdate
       copy:
         dest: /usr/local/bin/sysupdate
-        src: /etc/ansible/roles/files/sysupdate
+        src: "{{ sysupdate }}"
         mode: 0700
         owner: root
         group: root
