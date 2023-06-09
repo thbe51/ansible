@@ -1,4 +1,4 @@
-- hosts: "{{ acat }}"
+- hosts: "{{ hosts }}"
 
   become: yes
   tasks:
