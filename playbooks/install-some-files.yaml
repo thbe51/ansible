@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ hosts }}"
+- hosts: "adg1.acat.se"
 
   become: true
   tasks:
