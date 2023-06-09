@@ -6,8 +6,7 @@
 
     - name: install sysupdate
       copy:
-#        src: "{{ sysupdate }}"
-        src: /opt/files/sysupdate
+        src: "{{ sysupdate }}"
         dest: /usr/local/bin/sysupdate
         mode: 0700
         owner: root
