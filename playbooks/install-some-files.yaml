@@ -1,5 +1,5 @@
 ---
-- hosts: "adg1.acat.se"
+- hosts: "{{ ubuntu }}"
 
   become: true
   tasks:
@@ -14,7 +14,7 @@
 
     - name: install remove old kernels
       copy:
-        dest: /usr/local/bin/sysupdate
+        dest: /usr/local/bin/remove_old_kernels
         src: "{{ rok }}"
         mode: 0700
         owner: root
@@ -22,7 +22,7 @@
 
     - name: install install docker-compose
       copy:
-        dest: /usr/local/bin/sysupdate
+        dest: /usr/local/bin/install_docker-compose
         src: "{{ doc }}"
         mode: 0700
         owner: root
