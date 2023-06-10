@@ -16,7 +16,7 @@
         host: 192.168.66.8
         port: 25
         subject: Ansible report
-        body: Testing
+        body: '{{ inventory_hostname }} is running low on disk space. Currently {{ disk_free.results['item']['size_available'] }}MB available.'
         from: semaphore@sm0etv.se
         to: thomas@sm0etv.se
-        
+
