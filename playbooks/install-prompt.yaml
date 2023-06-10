@@ -9,4 +9,4 @@
         src: "{{ brc }}"
         dest: "~/.bashrc"
         mode: '0644'
-        
+
