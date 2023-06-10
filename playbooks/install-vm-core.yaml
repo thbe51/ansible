@@ -20,7 +20,6 @@
           - at
           - jq
           - whois
-          - bat
           - sysstat
           - fping
           - ncdu
