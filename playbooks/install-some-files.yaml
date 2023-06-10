@@ -31,9 +31,13 @@
     - name: Modify file for ntp
       lineinfile:
         path: /etc/systemd/timesyncd.conf
+    # The string to search for
         regexp: '^#NTP=$'
-        insertafter: "[Time]"
+    #   insertafter: "[Time]"
+    # The string to replace
         line: NTP=192.168.66.30
+        state: present
+        backup: yes
         owner: root
         group: root
         mode: '0644'
