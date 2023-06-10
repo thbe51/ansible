@@ -35,4 +35,4 @@
         headers:
           Content-type: application/json
         status_code: 204
-      when: reboot_required.stat.exists
+      when: reboot_required_file.stat.exists
