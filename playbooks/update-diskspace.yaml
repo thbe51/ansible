@@ -10,3 +10,13 @@
     - name: Check disk space available
       shell: df -h / | awk 'NR==2 {print $5}'
       register: disk_usage
+
+    - name: Send e-mail
+      mail:
+        host: 192.168.66.8
+        port: 25
+        subject: Ansible report
+        body: Testing
+        from: semaphore@sm0etv.se
+        to: thomas@sm0etv.se
+        
