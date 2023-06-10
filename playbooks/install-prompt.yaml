@@ -1,0 +1,12 @@
+---
+- hosts: "{{ hosts }}"
+
+become: true
+tasks:
+
+  - name: install .bashrc
+    copy:
+      src: "{{ brc }}"
+      dest: "~/.bashrc"
+      mode: '0644'
+      
