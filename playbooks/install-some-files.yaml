@@ -28,10 +28,19 @@
         owner: root
         group: root
 
-#    - name: Get docker-compose
-#      uri:
-#        url: "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"
-#        dest: /usr/local/bin/install_docker-compose
-#        owner: root
-#        group: root
-#        mode: 0700
+    - name: Modify file for ntp
+      lineinfile:
+        path: /etc/systemd/timesyncd.conf
+        regexp: '^#NTP=$'
+        insertafter: "[Time]"
+        line: NTP=192.168.66.30
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: "Set up language, keyboard"
+      copy:
+        dest: "/etc/default/locale"
+        content: |
+          LANG=en_US.UTF-8
+          LC_TIME=C.UTF-8
