@@ -15,4 +15,21 @@
         path: "~/.bash"
         state: directory
         mode: '0755'
-        
+
+    - name: copy file 1 to .bash
+      file:
+        src: "{{ ali }}"
+        dest: "~/.bash/bash_aliases"
+        mode: "0644"
+
+    - name: copy file 2 to .bash
+      file:
+        src: "{{ fun }}"
+        dest: "~/.bash/bash_functions"
+        mode: "0644"
+
+    - name: copy file 3 to .bash
+      file:
+        src: "{{ pro }}"
+        dest: "~/.bash/bash_prompt"
+        mode: "0644"
