@@ -6,15 +6,15 @@
     # Upgrade packages
     - name: update apt packages
       apt:
-        upgrade: yes
-        update_cache: yes
+        upgrade: "safe"
+        update_cache: true
 
     # Clean up
     - name: clean up stuff
       apt:
-        autoremove: yes
-        clean: yes
-        autoclean: yes
+        autoremove: true
+        clean: true
+        autoclean: true
 
     # Check if reboot is required
     - name: Check if system reboot is required
