@@ -22,3 +22,17 @@
       stat:
         path: /var/run/reboot-required
       register: reboot_required_file
+
+    # Send e-mail when reboot is required
+    - name: Send e-mail
+      mail:
+        host: 192.168.66.8
+        port: 25
+        to: thomas@sm0etv.se
+        from: semaphore@sm0etv.se
+        subject: Ansible-report
+        body: '{"content": "Reboot required on {{ inventory_hostname }}"}'
+        headers:
+          Content-type: application/json
+        status_code: 204
+      when: reboot_required.stat.exist
