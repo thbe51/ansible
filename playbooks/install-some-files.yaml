@@ -20,10 +20,19 @@
         owner: root
         group: root
 
-    - name: install install docker-compose
-      copy:
+#    - name: install install docker-compose
+#      copy:
+#        dest: /usr/local/bin/install_docker-compose
+#        src: "{{ doc }}"
+#        mode: 0700
+#        owner: root
+#        group: root
+
+    - name: Get docker-compose
+      uri:
+        url: "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"
         dest: /usr/local/bin/install_docker-compose
-        src: "{{ doc }}"
-        mode: 0700
         owner: root
         group: root
+        mode: 0700
+        
