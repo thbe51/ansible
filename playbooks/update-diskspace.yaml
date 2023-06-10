@@ -18,8 +18,8 @@
         subject: Ansible report
 #       body_format: json
         body: '{"content": "Disk space on {{ inventory_hostname }} is above 80%!"}'
-        headers:
-          Content-type: application/json
+#        headers:
+#          Content-type: application/json
 #       status_code: 204
         from: semaphore@sm0etv.se
         to: thomas@sm0etv.se
